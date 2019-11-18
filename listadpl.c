@@ -7,13 +7,6 @@
 #include <string.h>
 #include "listadpl.h"
 
-typedef struct tipocelula TipoCelula;
-
-struct tipocelula {
-    TipoItem* item;
-    TipoCelula* proxima;
-    TipoCelula* anterior;
-};
 
 struct tipoitem {
     char* nome;
@@ -22,22 +15,21 @@ struct tipoitem {
 };
 
 struct tipolistadpl {
-    TipoCelula* inicio;
+    TipoItem* item;
+    TipoListaDpl* proxima;
+    TipoListaDpl* anterior;
 };
 
 TipoListaDpl *Insere(TipoItem *aluno, TipoListaDpl *lista) {
-    TipoCelula *nova = (TipoCelula *) malloc(sizeof(TipoCelula *));
+    TipoListaDpl *nova = (TipoListaDpl *) malloc(sizeof(TipoListaDpl));
     nova->item = aluno;
+    nova->proxima = lista;
     nova->anterior = NULL;
-    if (lista->inicio != NULL) {
-        lista->inicio->anterior = nova;
-        nova->proxima = lista->inicio;
-    } else {
-        nova->proxima = NULL;
+    if (lista != NULL) {
+        lista->anterior = nova;
     }
-    lista->inicio = nova;
 
-    return lista;
+    return nova;
 }
 
 TipoItem *InicializaTipoItem(char *nome, int matricula, char *endereco) {
@@ -51,10 +43,10 @@ TipoItem *InicializaTipoItem(char *nome, int matricula, char *endereco) {
 }
 
 TipoListaDpl *Retira(TipoListaDpl *lista, char *nome) {
-    for (TipoCelula* p=lista->inicio; p!=NULL ; p = p->proxima) {
+    for (TipoListaDpl* p=lista; p!=NULL ; p = p->proxima) {
         if (strcmp(p->item->nome, nome) == 0) {
-            if (p == lista->inicio){
-                lista->inicio = p->proxima;
+            if (p == lista){
+                lista = p->proxima;
                 if (p->proxima != NULL) {
                   p->proxima->anterior = p->anterior;
                 }
@@ -71,16 +63,17 @@ TipoListaDpl *Retira(TipoListaDpl *lista, char *nome) {
 }
 
 void Imprime(TipoListaDpl *lista) {
-    for (TipoCelula* p=lista->inicio; p!=NULL ; p = p->proxima) {
+    for (TipoListaDpl* p=lista; p!=NULL ; p = p->proxima) {
         printf("%s | %d | %s",
                 p->item->nome,
                 p->item->matricula,
                 p->item->endereco);
+        printf("\n");
     }
 }
 
 TipoListaDpl *libera(TipoListaDpl *lista) {
-    for (TipoCelula* p=lista->inicio; p!=NULL ; p = p->proxima) {
+    for (TipoListaDpl* p=lista; p!=NULL ; p = p->proxima) {
         free(p->item->endereco);
         free(p->item->nome);
         free(p->item);

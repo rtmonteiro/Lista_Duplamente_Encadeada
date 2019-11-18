@@ -4,7 +4,7 @@
 
 int main() {
 
-    TipoListaDpl* lista = (TipoListaDpl*)malloc(sizeof(TipoListaDpl));
+    TipoListaDpl* lista = NULL;
 
     TipoItem* ryan = InicializaTipoItem("Ryan", 2019202359, "rua 1");
     TipoItem* lenke = InicializaTipoItem("Lenke", 2019202149, "rua 2");
@@ -15,5 +15,18 @@ int main() {
     lista = Insere(pedro, lista);
 
     Imprime(lista);
+
+    lista = Retira(lista,"Pedro");
+    Imprime(lista);
+
+//    lista = Retira(lista,"Lenke");
+//    Imprime(lista);
+//
+//    lista = Retira(lista,"Ryan");
+//    Imprime(lista);
+
+    lista = libera(lista);
+
+
     return 0;
 }

@@ -11,7 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0635aef9-38db-4a4c-8a66-dafa471494d6" name="Default Changelist" comment="" />
+    <list default="true" id="0635aef9-38db-4a4c-8a66-dafa471494d6" name="Default Changelist" comment="Refiz">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listadpl.c" beforeDir="false" afterPath="$PROJECT_DIR$/listadpl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,11 @@
     <favorites_list name="Lista_Duplamente_Encadeada" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ryan Monteiro &lt;ryan.monteiro@aluno.ufes.br&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -42,6 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -70,8 +80,38 @@
       <option name="presentableId" value="Default" />
       <updated>1573673402538</updated>
       <workItem from="1573673406303" duration="9886000" />
-      <workItem from="1573690848881" duration="2419000" />
+      <workItem from="1573690848881" duration="2625000" />
+      <workItem from="1573731690700" duration="470000" />
+      <workItem from="1574107245472" duration="162000" />
+      <workItem from="1574107508644" duration="1224000" />
+      <workItem from="1574108906190" duration="282000" />
+      <workItem from="1574109635084" duration="2186000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1573693344919</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573693344919</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
